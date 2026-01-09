@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1>Decision Wheel</h1>
+    <div>
+        <a href="home.html">Home</a>
+        <a href="wheel.html">Wheel</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Welcome 🎉</h2>
+    <p>Use the navigation to spin the wheel.</p>
+</div>
+
+<script>
+if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "signin.html";
+}
+
+function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "signin.html";
+}
+</script>
+
+</body>
+</html>
